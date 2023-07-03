@@ -26,10 +26,17 @@
     <button id="mode-btn">🎨Fill</button>
     <button id="erase-all-btn">💣Erase All</button>
     <button id="erase-btn">⚪Erase</button>
-    <label for="file">
+    <label id="label-file" for="file">
       📷Add Photo
       <input id="file" type="file" accept="image/*" />
     </label>
+    <label for="font">
+      <select name="font">
+        <option value="Arial">Arial</option>
+        <option value="Comic Sans">Comic Sans</option>
+      </select>
+    </label>
+    
     <input id="text" type="text" placeholder="✍️Add text here" />
     <button id="save">🖼️Save image</button>
   </div>

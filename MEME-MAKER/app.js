@@ -11,6 +11,9 @@ const fileInput = document.getElementById("file")
 const textInput = document.getElementById("text")
 const saveBtn = document.getElementById("save")
 
+// #1. font family for text
+const textFont = document.getElementById("text-font")
+
 const CANVAS_WIDTH = 800
 const CANVAS_HEIGHT = 800
 
@@ -98,10 +101,14 @@ function onFileChange(event) {
 
 function onDoubleClick(event) {
   const text = textInput.value
-  if( text !== "") {
+  if( text !== "" ) {
     ctx.save()
     ctx.lineWidth = 1
-    ctx.font = "60px serif"
+    console.log(textFont)
+    const fontFamily = textFont.value
+    console.log(fontFamily)
+    ctx.font = "60px Arial"
+    console.log(ctx.font)
     ctx.fillText(text, event.offsetX, event.offsetY)
     ctx.restore()
   }

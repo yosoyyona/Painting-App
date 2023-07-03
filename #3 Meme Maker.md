@@ -88,11 +88,10 @@ button {
 }
 ```
 
-
 # 3.5 Code Challenge
 
 1. font family of text
-ctx.font = 'bold 48px fontName'
+ctx.font = '(bold) 48px fontName'
 Loading fonts with the CSS Font Loading API
 - let f = new FontFact('text', 'url(x)')
 f.load().then(function() { })
