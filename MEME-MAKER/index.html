@@ -26,8 +26,8 @@
     
     <div class="btns">
       <form>
-        <fieldset>
-          <legend>📏Line width</legend>
+        <fieldset id="line-fieldset">
+          <legend>🖌️Line width</legend>
           <input id="line-width" type="range" min="1" max="10" value="5" step="0.1" list="markers" />
         </fieldset>
       </form>
@@ -40,24 +40,40 @@
       </datalist>
 
       <button id="mode-btn">🎨Fill</button>
-      <button id="erase-all-btn">💣Erase All</button>
-      <button id="erase-btn">⚪Erase</button>
+      <button id="erase-all-btn">🏳️Erase All</button>
+      <button id="erase-btn">🔘Erase</button>
       <label id="label-file" for="file">
-        📷Add Photo
+        📂Add Photo
         <input id="file" type="file" accept="image/*" />
       </label>
       
-      <select name="font" id="font-select">
-        <option value="">-Choose a font style-</option>
-        <option value="Arial">Arial</option>
-        <option value="Comic Sans">Comic Sans</option>
-      </select>
       
-      <input id="text" type="text" placeholder="✍️Add text here" />
+
+      <form>
+        <fieldset id="text-fieldset">
+          <legend>🔠Text</legend>
+          <select name="font" id="font-select" required>
+            <option value=""> - - - Font style - - - </option>
+            <option value="arial">Plain Style</option>
+            <option value="bitmap">Bitmap Style</option>
+            <option value="shiny">Shiny Style</option>
+          </select>
+          <div>
+            <input id="text-size" type="range" min="1" max="10" value="5" step="0.1" />
+          </div>
+
+          <div>
+            <input id="text" type="text" placeholder="✍️Add text here" />
+          </div>
+        </fieldset>
+      </form>
+
+
+
     </div>
   </div>
   
-  <button id="save">🖼️Save image</button>
+  <button id="save">🪄Export image</button>
   
   <script src="app.js"></script>
 </body>

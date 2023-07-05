@@ -1,5 +1,19 @@
 @import "reset.css";
 
+@font-face {
+  font-family: 'PyeongChangPeace-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeoDunggeunmoPro-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
   display: flex;
   gap: 20px;
@@ -34,12 +48,6 @@ canvas {
   border-radius: 10px;
 }
 
-.btns {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
 .color-options {
   display: flex;
   flex-direction: raw;
@@ -64,9 +72,16 @@ input#color {
   background-color: white;
 }
 
+.btns {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  gap: 20px;
+}
+
 button, #label-file {
   all: unset;
-  padding: 10px 0px;
+  padding: 12px 0px;
   text-align: center;
   color: white;
   background-color: royalblue;
@@ -76,12 +91,12 @@ button, #label-file {
   transition: opacity linear .1s;
 }
 
-fieldset {
+#line-fieldset {
   display: flex;
   justify-content: center;
   margin: auto;
   padding: 5px 0px;
-  border: 2px solid royalblue;
+  border: 3px solid royalblue;
   border-radius: 10px;
 }
 
@@ -92,18 +107,32 @@ legend {
   font-weight: 700;
 }
 
+/* specify range type  */
 input[type=range] {
   width: 85%;
+}
+
+#text-fieldset {
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+  color: royalblue;
+  font-weight: 500;
+  border: 3px solid royalblue;
+  border-radius: 10px;
+}
+
+#text-fieldset div {
+  margin: 5px 0px;
 }
 
 select {
   padding: 10px 0px;
   text-align: center;
-  color: white;
-  background-color: royalblue;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 1.5rem;
+  color: royalblue;
+  background-color: gainsboro;
+  border-style: none;
+  font-size: 1.4rem;
 }
 
 button:hover {
@@ -116,8 +145,9 @@ input#file {
 
 input#text {
   all: unset;
-  padding: 10px 0px;
-  font-weight: 500;
+  padding: 5px 0px;
+  margin: 5px;
+  font-weight: 400;
   text-align: center;
   background-color: white;
   border-radius: 10px;
@@ -130,3 +160,4 @@ input#text {
   border: 3px solid royalblue;
   background-color: white;
 }
+
