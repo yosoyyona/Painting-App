@@ -25,29 +25,10 @@
     </div>
     
     <div class="btns">
-      <form>
-        <fieldset id="line-fieldset">
-          <legend>🖌️Line width</legend>
-          <input id="line-width" type="range" min="1" max="10" value="5" step="0.1" list="markers" />
-        </fieldset>
-      </form>
-      
-      <!-- Adding tick marks to range control -->
-      <datalist id="markers">
-        <option value="1"></option>
-        <option value="5"></option>
-        <option value="10"></option>
-      </datalist>
-
-      <button id="mode-btn">🎨Fill</button>
-      <button id="erase-all-btn">🏳️Erase All</button>
-      <button id="erase-btn">🔘Erase</button>
       <label id="label-file" for="file">
         📂Add Photo
         <input id="file" type="file" accept="image/*" />
       </label>
-      
-      
 
       <form>
         <fieldset id="text-fieldset">
@@ -59,16 +40,34 @@
             <option value="shiny">Shiny Style</option>
           </select>
           <div>
-            <input id="text-size" type="range" min="1" max="10" value="5" step="0.1" />
+            <input id="text-size" type="range" min="40" max="100" value="70" step="5" />
           </div>
+          <div>
 
+          </div>
           <div>
             <input id="text" type="text" placeholder="✍️Add text here" />
           </div>
         </fieldset>
       </form>
 
+      <form>
+        <fieldset id="line-fieldset">
+          <legend>🖌️Line width</legend>
+          <input id="line-width" type="range" min="1" max="10" value="5" step="0.1" list="markers" />
+        </fieldset>
+      </form>
+      
+      <!-- Adding tick marks to range control, doesn't work -->
+      <datalist id="markers">
+        <option value="1"></option>
+        <option value="5"></option>
+        <option value="10"></option>
+      </datalist>
 
+      <button id="mode-btn">🎨Fill</button>
+      <button id="erase-btn">🔘Erase</button>
+      <button id="erase-all-btn">🏳️Erase All</button>
 
     </div>
   </div>

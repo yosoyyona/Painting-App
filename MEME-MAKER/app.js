@@ -13,8 +13,9 @@ const saveBtn = document.getElementById("save")
 
 // #1. font family for text
 const textFont = document.getElementById("font-select")
-/* const bitmapFont = new FontFace("bitmapFont", 'url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2)')
-const shinyFont = new FontFace("shinyFont", 'url(https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2)') */
+
+// #2. font size for text
+const textSize = document.getElementById("text-size")
 
 const CANVAS_WIDTH = 800
 const CANVAS_HEIGHT = 800
@@ -92,7 +93,6 @@ function onEraseClick() {
 function onFileChange(event) {
   const file = event.target.files[0]
   const url = URL.createObjectURL(file)
-  console.log(url) // -> blob:http://127.0.0.1:5000/...
   const image = new Image()
   image.src = url
   image.onload = function() {
@@ -101,10 +101,13 @@ function onFileChange(event) {
   fileInput.value = null
 }
 
+// #1, #2
+// check at https://stackoverflow.com/questions/18092753/change-font-size-of-canvas-without-knowing-font-family
 function onDoubleClick(event) {
   const text = textInput.value
   const fontStyle = textFont.value
-
+  const fontSize = textSize.value
+  
   if( text !== "" ) {
     ctx.save()
     ctx.lineWidth = 1
@@ -113,7 +116,7 @@ function onDoubleClick(event) {
     } else if(fontStyle === 'shiny') {
       ctx.font = "60px PyeongChangPeace-Bold"
     } else {
-      ctx.font = "60px Arial"
+      ctx.font = "70px Arial"
     }
     ctx.fillText(text, event.offsetX, event.offsetY)
     ctx.restore()
